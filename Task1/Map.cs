@@ -70,7 +70,7 @@ namespace Task1
             }
             for (int j = 0; j < buildNum; j++)
             {
-                if (rm.Next(0, 2) == 0)
+                if (rm.Next(0, 2) == 0) //randomly places rbuildings
                 {
                     ResourceBuilding a = new ResourceBuilding(rm.Next(0, 20),
                                                               rm.Next(0, 20),
@@ -129,7 +129,7 @@ namespace Task1
                     b.Size = new Size(20, 20);
                     b.Location = new Point(mu.XPos * 20, mu.YPos * 20);
                     b.Text = mu.Symbol;
-                    if (mu.team == 0)
+                    if (mu.team == 0) // added uniqe color
                     {
                         b.ForeColor = Color.Red;
                     }
@@ -178,7 +178,7 @@ namespace Task1
                     bb.Size = new Size(40, 40);
                     bb.Location = new Point(FB.xpos * 20, FB.ypos * 20);
                     bb.Text = FB.sYmbol;
-                    if (FB.tEaM == 0)
+                    if (FB.tEaM == 0) // added unique color 
                     {
                         bb.ForeColor = Color.Purple;
                     }
