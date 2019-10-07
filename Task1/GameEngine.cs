@@ -28,7 +28,7 @@ namespace Task1
             NumRounds = 1;
         }
 
-        public void GameLogic()
+        public void GameLogic() // this is my update.
         {
             for (int i = 0; i < map.Units.Count; i++)
             {
