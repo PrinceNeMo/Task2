@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Task1POE\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Task1POE\Task1\obj\Debug\Task1.Form1.resources
+C:\Users\User\Desktop\Task1POE\Task1\obj\Debug\Task1.Properties.Resources.resources
+C:\Users\User\Desktop\Task1POE\Task1\obj\Debug\Task1.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Task1POE\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Task1POE\Task1\bin\Debug\Task1.exe.config
+C:\Users\User\Desktop\Task1POE\Task1\bin\Debug\Task1.exe
+C:\Users\User\Desktop\Task1POE\Task1\bin\Debug\Task1.pdb
+C:\Users\User\Desktop\Task1POE\Task1\obj\Debug\Task1.exe
+C:\Users\User\Desktop\Task1POE\Task1\obj\Debug\Task1.pdb
