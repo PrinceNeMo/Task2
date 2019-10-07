@@ -53,7 +53,7 @@ namespace Task1
                 FileStream fs = new FileStream("Map Data", FileMode.Create, FileAccess.Write, FileShare.None);
                     using (fs)
                 {
-                    bf.Serialize(fs, mp);
+                    bf.Serialize(fs, mp); // saves the whole map class 
                     MessageBox.Show("file Saved");
                 }
             }
@@ -73,7 +73,7 @@ namespace Task1
                 FileStream fs = new FileStream("Map Data", FileMode.Create, FileAccess.Write, FileShare.None);
                     using (fs)
                 {
-                    mp = (Map)bf.Deserialize(fs);
+                    mp = (Map)bf.Deserialize(fs); // recalls the saved map class and recalls it. 
                     mp.Display(GroupMap);
                     MessageBox.Show("file loaded");
                 }
