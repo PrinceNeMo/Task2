@@ -22,7 +22,10 @@ namespace Task1
         List<Building> buildings;
         private int bull;
 
-        
+        Map(int x, int y)
+        {
+
+        }
 
         public List<Unit> Units
 
@@ -43,8 +46,8 @@ namespace Task1
             {
                 if (rm.Next(0, 2) == 0) //Generate Melee Unit
                 {
-                    MeleeUnit m = new MeleeUnit(rm.Next(0, 20),
-                                                rm.Next(0, 20),
+                    MeleeUnit m = new MeleeUnit(rm.Next(0, PosX),
+                                                rm.Next(0, PosY),
                                                 100,
                                                 1,
                                                 20,
@@ -55,8 +58,8 @@ namespace Task1
                 }
                 else // Generate Ranged Unit
                 {
-                    RangeUnit ru = new RangeUnit(rm.Next(0, 20),
-                                                rm.Next(0, 20),
+                    RangeUnit ru = new RangeUnit(rm.Next(0, PosX),
+                                                rm.Next(0, PosY),
                                                 100,
                                                 1,
                                                 20,
@@ -72,8 +75,8 @@ namespace Task1
             {
                 if (rm.Next(0, 2) == 0) //randomly places rbuildings
                 {
-                    ResourceBuilding a = new ResourceBuilding(rm.Next(0, 20),
-                                                              rm.Next(0, 20),
+                    ResourceBuilding a = new ResourceBuilding(rm.Next(0, PosX),
+                                                              rm.Next(0, PosY),
                                                               500,
                                                               (j % 2 == 0 ? 1 : 0),
                                                               "[RS]");
@@ -81,8 +84,8 @@ namespace Task1
                 }
                 else
                 {
-                    FactoryBuilding f = new FactoryBuilding(rm.Next(0, 20),
-                                                              rm.Next(0, 20),
+                    FactoryBuilding f = new FactoryBuilding(rm.Next(0, PosX),
+                                                              rm.Next(0, PosY),
                                                               500,
                                                               (j % 2 == 0 ? 1 : 0),
                                                               "[FS]");
@@ -199,8 +202,8 @@ namespace Task1
         {
             int x, y;
             Button b = (Button)sender;
-            x = b.Location.X / 20;
-            y = b.Location.Y / 20;
+            x = b.Location.X / PosX;
+            y = b.Location.Y / PosY;
             foreach (Unit u in units)
             {
                 if (u is RangeUnit)
@@ -228,8 +231,8 @@ namespace Task1
         {
             int x, y;
             Button bb = (Button)sender;
-            x = bb.Location.X / 20;
-            y = bb.Location.Y / 20;
+            x = bb.Location.X / PosX;
+            y = bb.Location.Y / PosY;
 
             foreach (Building d in buildings)
             {

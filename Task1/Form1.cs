@@ -15,8 +15,9 @@ namespace Task1
 {
     public partial class Form1 : Form
     {
+        int PosX;
+        int PosY;
         GameEngine Engine;
-
         public Form1()
         {
             InitializeComponent();
@@ -82,6 +83,27 @@ namespace Task1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PosX = Convert.ToInt32(txtboxX.Text); // converting the text boxs to ints
+            PosY = Convert.ToInt32(txtboxY.Text);
+            if (PosX == 0 && PosY == 0)
+            {
+                button1.Enabled = false;
+            }
+            else
+
+            if (PosX > 0 && PosY > 0)
+            {
+                button1.Enabled = true;
+                MessageBox.Show(" " + PosX + ";"+ " " + PosY);
+                Map map = new Map(40, 4, textBox1);
+                map.SetSize(PosX, PosY);
+                map.Generate();
+            }
+
         }
     }
 }
